@@ -4,7 +4,7 @@ const patientInfo = (props) => {
     console.log(props)
     return (
         <div>
-            <h1>{props.lastName} {props.firstName}</h1>
+            <h1>{props.lastName}, {props.firstName}</h1>
                 <table className='table'>
                         <thead>
                             <tr>
@@ -20,7 +20,7 @@ const patientInfo = (props) => {
                         </thead>
                         <tbody>
                             <tr>
-                                <th>1</th>
+                                <th>{props.id}</th>
                                 <td>{props.lastName}</td>
                                 <td>{props.firstName}</td>
                                 <td>{props.bloodPressure}</td>
@@ -28,11 +28,12 @@ const patientInfo = (props) => {
                                 <td>{props.respirations}</td>
                                 <td>{props.temperature} F </td>
                                 <th>
-                                    <button type="button" class="btn btn-primary">Select</button>
+                                    <button type="button" class="btn btn-primary">Edit</button>
                                 </th>
                             </tr>
                         </tbody>
                 </table>
+            <a href="/"><button type="button" class="btn btn-primary">Return</button></a>
             <button type="button" class="btn btn-primary">Add Data</button>
         </div>
     )
