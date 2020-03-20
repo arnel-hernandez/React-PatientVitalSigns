@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export class listPatients extends Component {
 
@@ -27,8 +28,7 @@ export class listPatients extends Component {
             pulse: '64',
             respirations: '19',
             temperature: '98.8'},
-        ],
-        patientCnt: []
+        ]
     }
 
     render() {
@@ -36,7 +36,7 @@ export class listPatients extends Component {
         const listPatients = patients.map(patient => {
             return(
         
-            <div>
+            <div key={patient.id}>
                 <div className="row p-3 mb-2 bg-light text-dark">
                     
                     <div className="col">
@@ -49,15 +49,17 @@ export class listPatients extends Component {
                         {patient.firstName}
                     </div>
                     <div className="col">
-                        <a href="/patient/1"> <button type="button" class="btn btn-primary">Select</button> </a>
+                        <Link to={'/patient/' + patient.id}>
+                            <button type="button" className="btn btn-primary">Select</button>
+                        </Link>
                     </div>
                 </div>
-
             </div>
         )})
         return (
             <div>
                 <h1><span className="badge badge-dark">Shift 1</span></h1>
+                <h4><em>Total Patients:</em> {patients.length}</h4>
                 <div className="row p-3 mb-2 bg-dark text-white">
                     <div className="col">
                         ID
@@ -69,7 +71,7 @@ export class listPatients extends Component {
                         First Name
                     </div>
                     <div className="col">
-
+                        
                     </div>
                 </div>
                 {listPatients}

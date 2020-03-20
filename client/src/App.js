@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 import Patients from './components/home/listPatients'
-import PatientInfo from './components/selected/patientInfo'
+import Patient from './components/selected/listPatient'
 
 import {
   BrowserRouter,
@@ -16,7 +16,7 @@ function App() {
       <div className="App">
           <Switch>
             <Route exact path='/' component={Patients} />
-            <Route path='/patient/:id' component={PatientInfo} />
+            <Route path='/patient/:id' component={Patient} />
           </Switch>
       </div>
     </BrowserRouter>

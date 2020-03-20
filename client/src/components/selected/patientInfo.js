@@ -33,6 +33,7 @@ const patientInfo = (props) => {
                             </tr>
                         </tbody>
                 </table>
+            
             <a href="/"><button type="button" class="btn btn-primary">Return</button></a>
             <button type="button" class="btn btn-primary">Add Data</button>
         </div>
