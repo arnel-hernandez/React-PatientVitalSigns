@@ -34,10 +34,13 @@ export class listPatients extends Component {
     render() {
         const patientID = this.props.match.params.id
         const { patients } = this.state
-        const patient = patients.find(id => id.id == patientID)
+        const patient = patients.find(id => id.id === Number(patientID))
         return (
-            <div>
+            <div key={patient.id}>
                 <h1><span className="badge badge-dark">Shift 1</span></h1>
+                <Link to='/'>
+                    <button type="button" className="btn btn-primary">Return</button>
+                </Link>
                 <div className="row p-3 mb-2 bg-dark text-white">
                     <div className="col">
                         ID
@@ -88,16 +91,13 @@ export class listPatients extends Component {
                         {patient.temperature}
                     </div>
                     <div className="col">
-                        <Link to={'/patient/add/' + patient.id}>
-                            <button type="button" class="btn btn-primary">Add</button>
-                        </Link>
-                        <Link to={'/patient/edit/' + patient.id}>
-                            <button type="button" class="btn btn-primary">Edit</button>
+                        <Link to={'/edit/' + patient.id}>
+                            <button type="button" className="btn btn-primary">Edit</button>
                         </Link>
                     </div>
                 </div>
-                        <Link to='/'>
-                            <button type="button" class="btn btn-primary">Return</button>
+                        <Link to={'/add/' + patient.id}>
+                            <button type="button" className="btn btn-primary">Add</button>
                         </Link>
             </div>
         )

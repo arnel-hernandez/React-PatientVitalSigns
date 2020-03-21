@@ -3,6 +3,8 @@ import './App.css';
 
 import Patients from './components/home/listPatients'
 import Patient from './components/selected/listPatient'
+import AddPatientInfo from './components/selected/addPatientInfo'
+import EditPatientInfo from './components/selected/editPatientInfo'
 
 import {
   BrowserRouter,
@@ -17,6 +19,8 @@ function App() {
           <Switch>
             <Route exact path='/' component={Patients} />
             <Route path='/patient/:id' component={Patient} />
+            <Route path='/add/:id' component={AddPatientInfo} />
+            <Route path='/edit/:id' component={EditPatientInfo} />
           </Switch>
       </div>
     </BrowserRouter>

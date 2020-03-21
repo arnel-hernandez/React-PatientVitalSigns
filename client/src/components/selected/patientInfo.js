@@ -34,8 +34,8 @@ const patientInfo = (props) => {
                         </tbody>
                 </table>
             
-            <a href="/"><button type="button" class="btn btn-primary">Return</button></a>
-            <button type="button" class="btn btn-primary">Add Data</button>
+            <a href="/"><button type="button" className="btn btn-primary">Return</button></a>
+            <button type="button" className="btn btn-primary">Add Data</button>
         </div>
     )
 }
