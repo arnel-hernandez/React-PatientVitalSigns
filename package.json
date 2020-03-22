@@ -1,0 +1,23 @@
+{
+  "name": "react-redux-vitalsigns",
+  "version": "1.0.0",
+  "description": "Simple Patient Vital Signs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnel-hernandez/React-PatientVitalSigns.git"
+  },
+  "author": "Arnel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arnel-hernandez/React-PatientVitalSigns/issues"
+  },
+  "homepage": "https://github.com/arnel-hernandez/React-PatientVitalSigns#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
