@@ -52,6 +52,9 @@ export class listPatients extends Component {
                         <Link to={'/patient/' + patient.id}>
                             <button type="button" className="btn btn-primary">Select</button>
                         </Link>
+                        <Link to={'/editpatient/' + patient.id}>
+                            <button type="button" className="btn btn-primary">Edit</button>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -75,6 +78,11 @@ export class listPatients extends Component {
                     </div>
                 </div>
                 {listPatients}
+                <div>
+                <Link to={'/addpatient'}>
+                    <button type="button" className="btn btn-primary">Add Patient</button>
+                </Link>
+                </div>
             </div>
         )
     }
