@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/arnel-hernandez/React-PatientVitalSigns#readme",
   "dependencies": {
-    "config": "^3.3.0",
+    "config": "^3.3.8",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongodb": "^3.5.5",
